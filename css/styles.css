@@ -1,0 +1,39 @@
+.main-content {
+  flex-grow: 1;
+}
+.condainer {
+  width: 100%;
+  max-width: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: gold;
+}
+
+/* Pastga qaragan uchburchak */
+/* qaysi tomonga qaragan uchburchak yasamoqchi bo'lsak shu tomonni ikki tomoni border rangini transparent qilib qarama qarshi tomonga border rangini beramiz*/
+.box::after {
+  position: absolute;
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid gold;
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid gold;
+  bottom: 0;
+  transform: translateY(50%);
+}
